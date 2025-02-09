@@ -1,10 +1,11 @@
 import os
+from dotenv import load_dotenv
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 
-if os.path.exists("env.py"):
-    import env
+if os.path.exists(".env"):
+    load_dotenv()
 
 
 app = Flask(__name__)
